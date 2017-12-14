@@ -31,12 +31,12 @@ function receiveData(receiveBuff) {
         return false;
     }
     var tempProtocol = new UnpackProtocol(receiveBuff, receiveBuff.byteLength);
-    var tempDataLen = tempProtocol.ReadUint16;
+    var tempDataLen = tempProtocol.ReadUint16();
     reflex(tempProtocol);
 };
 
 function UnpackProtocol(data, size) {
-    var mBuffer = new Uint8Array(uSize);
+    var mBuffer = new Uint8Array(size);
     var buffer;
     var mBufferLen;
     var mPos = 0;
@@ -45,7 +45,7 @@ function UnpackProtocol(data, size) {
     }
     //mBufferLen = size;
     this.ReadBoolean = function () {
-        var val = this.ReadUint8;
+        var val = this.ReadUint8();
         if (1 == val)
             return true;
         return false;
@@ -90,7 +90,7 @@ function UnpackProtocol(data, size) {
         return var1;
     }
     this.ReadString = function () {
-        var uLen = this.ReadUint16;
+        var uLen = this.ReadUint16();
         var temp = mPos;
         var str = "";
         str = new TextDecoder("utf-8").decode(mBuffer.subarray(temp, temp + uLen));
