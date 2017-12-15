@@ -1,0 +1,13 @@
+[{
+    "type": "1",
+    "funName": "proto1",
+    "serviceName": "proto1Service"
+}, {
+    "type": "2",
+    "funName": "proto2",
+    "serviceName": "proto2Service"
+}, {
+    "type": "3",
+    "funName": "proto3",
+    "serviceName": "proto3Service"
+}]
