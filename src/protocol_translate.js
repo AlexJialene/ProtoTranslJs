@@ -4,10 +4,10 @@ var dataLen = 0;
 var currentLen = 0;
 var receiveBuff;
 var packLen = 512;
-var protoJsonPath = "./syuio_protocol.json";
+var protoJsonPath = "./transl_protocol.json";
 var auto_reflex_service = true;
 
-function initSyuio(path, autoReflex) {
+function initProtoTransl(path, autoReflex) {
     // body...
     protoJsonPath = path;
     auto_reflex_service = autoReflex;
